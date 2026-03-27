@@ -33,4 +33,4 @@ O pipeline foi desenhado para maximizar a performance analítica e o custo compu
 ---
 
 ## Intstruções de Instalação
-Notebook principal é o arquivo 0_notebook_principal.ipynb , antes de rodar certifique-se de instalar as dependências e baixar o arqiuivo [complaints.csv.zip](https://www.consumerfinance.gov/data-research/consumer-complaints/#get-the-data) e colocálo no caminho: data/raw/
+Notebook principal é o arquivo 0_notebook_principal.ipynb , antes de rodar certifique-se de instalar as dependências e baixar o arqiuivo [complaints.csv.zip](https://www.consumerfinance.gov/data-research/consumer-complaints/#get-the-data) e colocálo no caminho: `data/raw/`
