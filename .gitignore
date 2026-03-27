@@ -1,0 +1,17 @@
+# arquivos com dados
+*.parquet
+*.csv.zip
+*.safetensors
+
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+models/student_model/checkpoints/
+.ipynb_checkpoints/
