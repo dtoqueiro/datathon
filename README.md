@@ -28,7 +28,7 @@ O pipeline foi desenhado para maximizar a performance analítica e o custo compu
 
 ## 📊 Principais Insights de Negócio
 
-> **Verificação Visual:** Acesse a pasta `reports/business_insights/` para os gráficos completos (Top Produtos, Top Problemas, Top Empresas).
+**Verificação Visual:** Acesse a pasta `reports/business_insights/` para os gráficos completos (Top Produtos, Top Problemas, Top Empresas).
 
 ---
 
