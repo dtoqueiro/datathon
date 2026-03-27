@@ -21,18 +21,12 @@ O pipeline foi desenhado para maximizar a performance analítica e o custo compu
 1. **Engenharia de Dados (Out-of-Core):** Ingestão em *streaming* via **DuckDB** e manipulação *Lazy* via **Polars**, permitindo o processamento de milhões de linhas sem gargalos de memória RAM, salvando em formato colunar Parquet (Snappy).
 2. **Modelo Teacher (RoBERTa):** Utilização de um modelo pesado para inferência em batch via GPU, gerando *pseudo-labels* de alta precisão.
 3. **Gold Rule & Curadoria:** Aplicação de filtro (>75% de confiança do Teacher e descarte de neutros) para criar o *Gold Dataset*.
-4. **Modelo Student (DistilBERT):** *Fine-tuning* de um modelo mais leve usando texto processado (spaCy), resultando em uma inferência **~4x mais rápida**, ideal para ambientes de produção.
+4. **Modelo Student (DistilBERT):** *Fine-tuning* de um modelo mais leve usando texto processado (spaCy), resultando em uma inferência **~2x mais rápida**, ideal para ambientes de produção.
 5. **Business Intelligence:** Aplicação de **BERTopic** estritamente na base de sentimentos negativos para descoberta não-supervisionada das causas-raiz (Dores do Cliente).
 
 ---
 
 ## 📊 Principais Insights de Negócio
-
-A aplicação do modelo revelou que a maior fonte de sentimento negativo não provém de custos financeiros (juros/taxas), mas de **fricção de dados e processos de atendimento**:
-
-* 🚨 **O Colapso do Relatório de Crédito:** O produto líder absoluto de reclamações é o *Credit Reporting*. As queixas focam em dados incorretos e uso indevido de relatórios pelas agências gigantes (Equifax, TransUnion, Experian).
-* 💸 **Transferências Digitais:** Alto volume de insatisfação em transações, contas retidas e falhas de aplicativos.
-* 🛑 **Cobranças Indevidas:** Tentativas de cobrança de dívidas inexistentes ou fraudes não resolvidas pelos bancos.
 
 > **Verificação Visual:** Acesse a pasta `reports/business_insights/` para os gráficos completos (Top Produtos, Top Problemas, Top Empresas).
 
