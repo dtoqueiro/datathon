@@ -20,7 +20,7 @@ O pipeline foi desenhado para maximizar a performance analítica e o custo compu
 
 1. **Engenharia de Dados (Out-of-Core):** Ingestão em *streaming* via **DuckDB** e manipulação *Lazy* via **Polars**, permitindo o processamento de milhões de linhas sem gargalos de memória RAM, salvando em formato colunar Parquet (Snappy).
 2. **Modelo Teacher (RoBERTa):** Utilização de um modelo pesado para inferência em batch via GPU, gerando *pseudo-labels* de alta precisão.
-3. **Gold Rule & Curadoria:** Aplicação de filtro rigoroso (>90% de confiança do Teacher e descarte de neutros) para criar o *Gold Dataset*.
+3. **Gold Rule & Curadoria:** Aplicação de filtro (>75% de confiança do Teacher e descarte de neutros) para criar o *Gold Dataset*.
 4. **Modelo Student (DistilBERT):** *Fine-tuning* de um modelo mais leve usando texto processado (spaCy), resultando em uma inferência **~4x mais rápida**, ideal para ambientes de produção.
 5. **Business Intelligence:** Aplicação de **BERTopic** estritamente na base de sentimentos negativos para descoberta não-supervisionada das causas-raiz (Dores do Cliente).
 
